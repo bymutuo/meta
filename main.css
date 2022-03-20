@@ -478,10 +478,12 @@ main.info{
 }
 
 .info .aboutBlock .bioImgWrapper figcaption{
-    text-align: right;
-    float: right;
     font-size: 10px;
     color: var(--meadowGreen);
+    text-align: right;
+    width: 45ch;
+    max-width: 30vw;
+    float: right;
     margin: 15px 10px;
 }
 
@@ -702,6 +704,47 @@ main.tour{
     margin: var(--paddingV) var(--paddingH);
 }
 
+.tour .topBlock{ }
+
+.tour .topBlock > *{
+    display: inline-block;
+}
+
+.tour .topBlock > *:first-child{
+    width: 50ch;
+    max-width: 70vw;
+    vertical-align: top;
+}
+
+.tour .concerts .tourImgWrapper{
+    display: inline-block;
+    margin-bottom: -50px;
+}
+
+.tour .concerts.tourImage .tourImg{
+    width: 45ch;
+    max-width: 30vw;
+    padding: 10px;
+    border: solid 1px var(--black);
+}
+
+.tour .concerts .tourImgWrapper figcaption{
+    font-size: 10px;
+    color: var(--meadowGreen);
+    text-align: right;
+    width: 45ch;
+    max-width: 30vw;
+    float: right;
+    margin: 15px 10px;
+}
+
+@media (max-width: 1050px){
+    .tour .concerts.tourImage .tourImg{
+        max-width: calc(100vw - var(--paddingH) * 4);
+        margin-top: calc(var(--paddingV) * -1);
+    }
+}
+
 .tour .concerts h2{
     font-weight: 500;
     text-transform: uppercase;
@@ -829,5 +872,15 @@ main.tour{
     
     .tour .concerts {
         margin: var(--paddingV) 0;
+    }
+    
+    .tour .tourImage .tourImg{
+        height: 45ch !important;
+        max-width: calc(100vw - var(--paddingH) * 2 - 20px);
+    }
+    
+    .tour .topBlock > *:first-child{
+        max-width: calc(100vw - var(--paddingH) * 2);
+        margin-right: 0;
     }
 }

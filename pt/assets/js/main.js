@@ -84,12 +84,14 @@ $('.bouceAnim').each(function(){
 
 /* BRACKET TYPE TOOLTIPS */
 $('.details').html(function(i, h) {
-    return h.replace(/(\[.+\])/g, '<span class="entity" title="entidade">$1</span>').replace(/(\{.+\})/g, '<span class="kind" title="tipo">$1</span>').replace(/(\(.+\))/g, '<span class="year" title="data">$1</span>').replace(/(\〈.+\〉)/g, '<span class="lang" title="língua">$1</span>');
+    return h.replace(/(\[.+\])/g, '<span class="entity" title="entity">$1</span>').replace(/(\{.+\})/g, '<span class="kind" title="kind">$1</span>').replace(/(\(.+\))/g, '<span class="year" title="year">$1</span>').replace(/(\〈.+\〉)/g, '<span class="lang" title="language">$1</span>');
 });
 
 /* BIO PHOTO HEIGHT SAME AS PARAGRAPH */
 $(window).on('resize',function(){
     $('.bioImg').css('height', parseInt($('.bioTextWrapper').css('height')) - $('.bioTextWrapper h2').outerHeight(true) + "px" );
+    
+    $('.tourImg').css('height', parseInt($('.tour .topBlock > *:first-child').css('height')) - $('.tour .concerts h2').outerHeight(true) * 4 + "px" );
 }).trigger('resize');
 
 /* FOOTER LINE BREAKS */
