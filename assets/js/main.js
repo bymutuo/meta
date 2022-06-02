@@ -84,7 +84,7 @@ $('.bouceAnim').each(function(){
 
 /* BRACKET TYPE TOOLTIPS */
 $('.details').html(function(i, h) {
-    return h.replace(/(\[.+\])/g, '<span class="entity" title="entity">$1</span>').replace(/(\{.+\})/g, '<span class="kind" title="kind">$1</span>').replace(/(\(.+\))/g, '<span class="year" title="year">$1</span>').replace(/(\〈.+\〉)/g, '<span class="lang" title="language">$1</span>');
+    return h.replace(/(\[.+\])/g, '<span class="entity" title="entity">$1</span>').replace(/(\{.+\})/g, '<span class="kind" title="kind">$1</span>').replace(/(\(.+\))/g, '<span class="year" title="year">$1</span>').replace(/(\〈.+\〉)/g, '<span class="lang" title="language">$1</span>').replace(/(\〔.+\〕)/g, '<span class="location" title="location">$1</span>');
 });
 
 /* BIO PHOTO HEIGHT SAME AS PARAGRAPH */
