@@ -732,7 +732,6 @@ main.watch{
     }
 }
 
-
 .watch .videoGallery li figcaption{
     font-size: 10px;
     margin: 15px 0;
@@ -776,6 +775,7 @@ main.photos{
     margin-right: calc(var(--paddingH));
     margin-left: -10px;
     margin-bottom: var(--paddingV);
+    vertical-align: top;
 }
 
 .photos .photoWrapper.photo{
