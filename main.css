@@ -184,6 +184,50 @@ body{
     padding: var(--paddingV) var(--paddingH);
 }
 
+.grain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    z-index: 300;
+    transform: translateZ(0);
+}
+
+.grain:before {
+    content: "";
+    top: -10rem;
+    left: -10rem;
+    width: calc(100% + 20rem);
+    height: calc(100% + 20rem);
+    z-index: 9999;
+    position: fixed;
+    background-image: url(./assets/media/grain-light.png);
+    opacity: 0.15;
+    pointer-events: none;
+    -webkit-animation: noise 1s steps(2) infinite;
+    animation: noise 1s steps(2) infinite;
+}
+
+@-webkit-keyframes noise {
+    to { transform: translate3d(-7rem, 0, 0); }
+}
+
+@keyframes noise {
+    0%  { transform: translate3d( 0,     9rem, 0); }
+    10% { transform: translate3d(-1rem, -4rem, 0); }
+    20% { transform: translate3d(-8rem,  2rem, 0); }
+    30% { transform: translate3d( 9rem, -9rem, 0); }
+    40% { transform: translate3d(-2rem,  7rem, 0); }
+    50% { transform: translate3d(-9rem, -4rem, 0); }
+    60% { transform: translate3d( 2rem,  6rem, 0); }
+    70% { transform: translate3d( 7rem, -8rem, 0); }
+    80% { transform: translate3d(-9rem,  1rem, 0); }
+    90% { transform: translate3d( 6rem, -5rem, 0); }
+    to  { transform: translate3d(-7rem,  0,    0); }
+}
+
 nav{
     position: fixed;
     width: calc(100vw - var(--paddingH) * 2);
@@ -206,8 +250,10 @@ nav > *{
 
 .navItem{
     margin-bottom: calc(var(--paddingV) / 4);
+/*
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
+*/
 }
 
 .button:hover{
@@ -218,6 +264,16 @@ footer{
     position: fixed;
     width: calc(100vw - var(--paddingH) * 2);
     bottom: var(--paddingV);
+}
+
+.footerGradient{
+    background: linear-gradient(0deg, rgba(248,242,234,.98) 75%, rgba(248,242,234,0) 100%);
+    position: fixed;
+    height: 8vh;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .footerButtonsWrapper{
@@ -245,8 +301,10 @@ footer{
     position: relative;
     vertical-align: bottom;
     top: 1em;
+/*
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
+*/
 }
 
 .footerItem{
@@ -516,6 +574,7 @@ main.listen{
     margin-right: calc(var(--paddingH));
     margin-left: -10px;
     margin-bottom: var(--paddingV);
+    vertical-align: top;
 }
 
 .listen .imgWrapper.artwork{
