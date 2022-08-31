@@ -862,6 +862,14 @@ main.tour{
         font-size: 32px;
     }
     
+    .grain:before {
+        background-image: url(./assets/media/grain-heavy.png);
+    }
+    
+    .footerGradient{
+        height: 12vh;
+    }
+    
     .info .aboutBlock{
         margin: var(--paddingV) 0;
     }
