@@ -744,6 +744,88 @@ main.watch{
     margin-top: 7.5px;
 }
 
+/* PHOTOS */
+
+main.photos{
+    padding-bottom: calc(var(--paddingV) * 2);
+}
+
+.photos .photoGalleryWrapper{
+    padding-top: 3em;
+}
+
+.photos .photoGallery{
+    max-width: calc(100vw - var(--paddingH) * 4);
+    margin: var(--paddingV) var(--paddingH);
+}
+
+.photos .photoGallery h2{
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--carminRed);
+    margin-bottom: 1em;
+}
+
+.photos .photoGallery ul{
+    margin-right: calc(var(--paddingH) * -1 - 10px);
+    text-align: center;
+}
+
+.photos .photoGallery li{
+    display: inline-block;
+    margin-right: calc(var(--paddingH));
+    margin-left: -10px;
+    margin-bottom: var(--paddingV);
+}
+
+.photos .photoWrapper.photo{
+    border: solid 1px var(--black);
+    background-color: var(--black);
+    background-clip: content-box;
+    padding: 10px;
+}
+
+.photos .photoWrapper.landscape.photo{
+    height: calc(30ch - 20px);
+    width: calc(40ch - 20px);
+}
+
+.photos .photoWrapper.profile.photo{
+    height: calc(40ch - 20px);
+    width: calc(30ch - 20px);
+}
+
+.photoWrapper img{
+    display: table;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity .3s ease 0s;
+}
+
+/*
+@media (hover: hover){
+    .photos .videoWrapper.video:hover img{
+        opacity: .6;
+        transition: opacity .3s ease 0s;
+    }
+}
+*/
+
+
+.photos .photoGallery li figcaption{
+    font-size: 10px;
+    margin: 15px 0;
+    float: left;
+    text-align: left;
+}
+
+.photos .photoGallery li figcaption a{
+    margin-top: 7.5px;
+}
+
+/* TOUR */
+
 main.tour{
     padding-bottom: calc(var(--paddingV) * 2);
 }
@@ -925,6 +1007,30 @@ main.tour{
     .watch .videoWrapper.video {
         width: calc(100vw - var(--paddingH) * 2 -20px);
         height: calc( (100vw - var(--paddingH) * 2 -20px) * .75);
+    }
+    
+    .photos .photoGallery {
+        max-width: calc(100vw - var(--paddingH));
+        margin: var(--paddingV) 0;
+    }
+    
+    .photos .photoGallery ul {
+        margin-right: 0;
+    }
+    
+    .photos .photoGallery li {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
+    .photos .photoWrapper.profile.photo {
+        height: calc(100vw - var(--paddingH) * 2 -20px);
+        width: calc( (100vw - var(--paddingH) * 2 -20px) * .75);
+    }
+    
+    .photos .photoWrapper.landscape.photo {
+        height: calc( (100vw - var(--paddingH) * 2 -20px) * .75);
+        width: calc(100vw - var(--paddingH) * 2 -20px);
     }
     
     .tour .concerts {
