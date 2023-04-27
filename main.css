@@ -515,12 +515,15 @@ main.info{
 
 .info .aboutBlock .bioImgWrapper{
     display: inline-block;
-    margin-bottom: -50px;
+    vertical-align: top;
+    margin-top: 25px;
 }
 
 .info .aboutBlock.bio .bioImg{
     width: 45ch;
     max-width: 30vw;
+    height: 65ch;
+    max-height: 43.5vw;
     padding: 10px;
     border: solid 1px var(--black);
 }
@@ -812,7 +815,6 @@ main.photos{
 }
 */
 
-
 .photos .photoGallery li figcaption{
     font-size: 10px;
     margin: 15px 0;
@@ -916,8 +918,13 @@ main.tour{
 }
 
 .tour .concerts.upcoming span{
-    color: var(--meadowGreen);
     font-size: 13px;
+    letter-spacing: .5px;
+    line-height: 20px;
+    text-transform: capitalize;
+    color: var(--meadowGreen);
+    margin-top: 10px;
+    display: inline-block;
 }
 
 @media screen and (max-aspect-ratio: 8/9), screen and (max-width: 800px){
